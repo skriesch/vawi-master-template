@@ -11,13 +11,14 @@
 \def\confidential{1}
 
 % Allgemeine Variablen
-\renewcommand\title{Wissenschaftliches Arbeiten}
+\renewcommand{\title}{Wissenschaftliches Arbeiten}
 \newcommand{\titleEN}{Scientific work}
-\renewcommand\date{\today}
+\renewcommand{\date}{\today}
 \newcommand{\typeofwork}{Masterarbeit}
 \newcommand{\company}{Muster GmbH}
 \newcommand{\uni}{Otto-Friedrich Universität Bamberg}
 \newcommand{\study}{Virtueller Weiterbildungsstudiengang Wirtschaftsinformatik (VAWi)}
+\newcommand{\keywords}{Hardware Emulation, Docker, QEMU, Apache Cassandra, Kubernetes, Open Source, Linux on Z, IBM Z, Mainframes}
 
 % Daten des Autors
 \renewcommand\author{Max Mustermann}
@@ -35,17 +36,38 @@
 \newcommand{\submissionsemester}{Wintersemester 19/20}
 
 % Zitierstiel & Bib-Quelle
-\usepackage{hyperref}
+\usepackage[
+    bookmarks=true,
+    bookmarksopen=true,
+    bookmarksnumbered=true,
+    bookmarksopenlevel=1,
+    pdftitle={\title},
+    pdfauthor={\author},
+    pdfcreator={\author},
+    pdfsubject={\title},
+    pdfkeywords={\keywords},
+    pdfpagelabels=true,
+    colorlinks=true,
+    linkcolor=vawiblue,
+    urlcolor=vawilightblue,
+    anchorcolor=black,
+    citecolor=vawiblue,
+    filecolor=magenta,
+    menucolor=vawilightblue,
+    plainpages=false,
+    hypertexnames=true,
+    linktocpage=true,
+]{hyperref}
 \usepackage[
 backend=bibtex,
-style=nature,
+style=alphabetic,
 sorting=nty,
 giveninits=true,
 url=true,
 doi=true,
 eprint=true
 ]{biblatex}
-\DeclareFieldFormat{labelnumberwidth}{\mkbibbrackets{#1}}% fix for different name orders per citation
+%\DeclareFieldFormat{labelnumberwidth}{\mkbibbrackets{#1}}% fix for different name orders per citation
 %\usepackage[notes,short,backend=biber]{biblatex-chicago}
 %\renewcommand\citeform[1]{[#1]} 
 \addbibresource{bibliography.bib}
@@ -116,6 +138,8 @@ eprint=true
 \input{content.tex}
 % Literaturverzeichnis
 \printbibliography[title={Bibliographie}]
+
+
 \thispagestyle{headeronly}
 % Eidesstattliche Versicherung
 \input{templates/declaration_on_oath.tex}

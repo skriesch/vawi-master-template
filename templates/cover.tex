@@ -2,7 +2,12 @@
   \thispagestyle{empty}
     \begin{minipage}{.45\linewidth}
        \begin{flushleft} %Uni logo on left
-          \includegraphics[scale=0.8]{images/bamberg} 
+        \IfEndWith{\uni}{Bamberg}{
+        
+             \includegraphics[scale=0.8]{images/bamberg}
+        }{
+         	 \includegraphics[scale=0.8]{images/duisburg-essen}
+        }
         \end{flushleft}
      \end{minipage}
       \hfill
@@ -30,10 +35,10 @@
     \uni
     \begin{flushleft}
         \begin{tabular}{@{}l p{10cm}}
-            Verfasser:      & \textbf{\author} \newline \street \newline \zipcode \space \city \newline \mtrnr \\[10mm]
-            Erstgutachter:  & \firstexpert                                                                     \\
+            Verfasser\slash in:      & \textbf{\author} \newline \street \newline \zipcode \space \city \newline \mtrnr \\[10mm]
+            Prüfer\slash in:  & \firstexpert                                                                     \\
             \if\secondsubmission 1
-            Zweitgutachter: & \secondexpert
+            Zweitprüfer\slash in: & \secondexpert
             \fi
             \\[10mm]Abgabe: & \submissiondate \space / \submissionsemester
         

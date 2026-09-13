@@ -58,6 +58,8 @@ Allgemeines |
 `\typeofwork` | Art der Arbeit (z.B. Masterarbeit, Projektarbeit)
 `\company` | Unternehmen, falls die Arbeit einen Kotext hat
 `\uni` | Universität an der die Arbeit geschrieben wird
+`\study` | Studiengang
+`\keywords` | Schlüsselwörter für Forschungskategorien
 Autor |
 `\author` | Autor der Arbeit
 `\street` | Adresse des Autors

@@ -2,12 +2,12 @@
   \thispagestyle{empty}
     \begin{minipage}{.45\linewidth}
        \begin{flushleft} %Uni logo on left
-        \IfEndWith{\uni}{Bamberg}{
+          \IfEndWith{\uni}{Bamberg}{
         
              \includegraphics[scale=0.8]{images/bamberg}
-        }{
+          }{
          	 \includegraphics[scale=0.8]{images/duisburg-essen}
-        }
+          }
         \end{flushleft}
      \end{minipage}
       \hfill
@@ -31,8 +31,13 @@
     \large\textit{\titleEN}
     \end{center}
     \vfill
-    \noindent\normalsize Vorgelegt der Fakultät für Angewandte Informatik \& Wirtschaftsinformatik der \\ 
-    \uni
+      \noindent\normalsize Vorgelegt der 
+       \IfEndWith{\uni}{Bamberg}{
+       		Fakultät für Angewandte Informatik \& Wirtschaftsinformatik der
+       }{
+            Fakultät für Informatik der
+       }\\ 
+      \uni
     \begin{flushleft}
         \begin{tabular}{@{}l p{10cm}}
             Verfasser\slash in:      & \textbf{\author} \newline \street \newline \zipcode \space \city \newline \mtrnr \\[10mm]
